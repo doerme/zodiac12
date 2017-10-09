@@ -1,5 +1,11 @@
 @import './lib/mixins.scss';
 @import './lib/base.scss';
 
+@import './mod/animate.scss';
+
 @import './mod/loading.scss';
 @import './mod/toast.scss';
+@import './mod/header.scss';
+@import './mod/footer.scss';
+@import './mod/main.scss';
+@import './mod/dialog.scss';

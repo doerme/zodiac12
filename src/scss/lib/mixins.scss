@@ -13,7 +13,7 @@
     }
 }
 
-@mixin singleline-ellipsis($substract:0) {
+@mixin text-overflow($substract:0) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

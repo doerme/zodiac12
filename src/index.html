@@ -1,14 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>test</title>
+        <title>十二生肖</title>
         <%= require('html!./partials/header.html')  %>
     </head>
-    <body>
+    <body onload="loadSound()">
         <%= require('html!./partials/toast.html')  %>
         <%= require('html!./partials/loading.html')  %>
+
+        <%= require('html!./partials/pageHeader.html')  %>
+        <%= require('html!./partials/lunpan.html')  %>
+        <%= require('html!./partials/footer.html')  %>
+        <%= require('html!./partials/dialog.html')  %>
         
-        <div id="test"></div>
-        <img src="<%= require('./images/fish.png')  %>" alt="">
+        <div style="display:none;" id="js-img-wrap">
+            <img src="<%= require('./images/active-1.png')  %>" alt="">
+            <img src="<%= require('./images/butn-menu.png')  %>" alt="">
+            <img src="<%= require('./images/item-20.png')  %>" alt="">
+            <img src="<%= require('./images/plus.png')  %>" alt="">
+            <img src="<%= require('./images/select-3-hover.png')  %>" alt="">
+            <img src="<%= require('./images/zs.png')  %>" alt="">
+            <img src="<%= require('./images/active-2.png')  %>" alt="">
+            <img src="<%= require('./images/butn_cancel.png')  %>" alt="">
+            <img src="<%= require('./images/item-21.png')  %>" alt="">
+            <img src="<%= require('./images/result_bg.png')  %>" alt="">
+            <img src="<%= require('./images/select-3.png')  %>" alt="">
+            <img src="<%= require('./images/award_paper.png')  %>" alt="">
+            <img src="<%= require('./images/close.png')  %>" alt="">
+            <img src="<%= require('./images/jbs.png')  %>" alt="">
+            <img src="<%= require('./images/select-1-hover.png')  %>" alt="">
+            <img src="<%= require('./images/body_bg.jpg')  %>" alt="">
+            <img src="<%= require('./images/dialog_award.png')  %>" alt="">
+            <img src="<%= require('./images/jinbi.png')  %>" alt="">
+            <img src="<%= require('./images/select-1.png')  %>" alt="">
+            <img src="<%= require('./images/tab2_beishu.png')  %>" alt="">
+            <img src="<%= require('./images/bottom_bg.png')  %>" alt="">
+            <img src="<%= require('./images/dialog_default.png')  %>" alt="">
+            <img src="<%= require('./images/jishi_bg.png')  %>" alt="">
+            <img src="<%= require('./images/select-2-hover.png')  %>" alt="">
+            <img src="<%= require('./images/tab3_beishu.png')  %>" alt="">
+            <img src="<%= require('./images/butn-help.png')  %>" alt="">
+            <img src="<%= require('./images/header_bg.png')  %>" alt="">
+            <img src="<%= require('./images/lunpan.png')  %>" alt="">
+            <img src="<%= require('./images/select-2.png')  %>" alt="">
+            <img src="<%= require('./images/text-num.png')  %>" alt="">
+            <img src="<%= require('./images/sx/gou.png')  %>" alt="">
+            <img src="<%= require('./images/sx/hu.png')  %>" alt="">
+            <img src="<%= require('./images/sx/long.png')  %>" alt="">
+            <img src="<%= require('./images/sx/niu.png')  %>" alt="">
+            <img src="<%= require('./images/sx/shu.png')  %>" alt="">
+            <img src="<%= require('./images/sx/yang.png')  %>" alt="">
+            <img src="<%= require('./images/sx/hou.png')  %>" alt="">
+            <img src="<%= require('./images/sx/ji.png')  %>" alt="">
+            <img src="<%= require('./images/sx/ma.png')  %>" alt="">
+            <img src="<%= require('./images/sx/she.png')  %>" alt="">
+            <img src="<%= require('./images/sx/tu.png')  %>" alt="">
+            <img src="<%= require('./images/sx/zhu.png')  %>" alt="">
+        </div>
+        <script src="/sesx/js/lib/zepto.min.js"></script>
+        <script src="/sesx/js/lib/fastclick.js"></script>
+        <script src="/sesx/js/lib/velocity.js"></script>
     </body>
 </html>

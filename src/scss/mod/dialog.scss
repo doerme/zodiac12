@@ -1,0 +1,252 @@
+.dialog-default {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    z-index: 99;
+    &.active {
+        display: block;
+        .content {
+            animation: bounceIn 0.6s ease forwards;
+            -webkit-animation: bounceIn 0.6s ease forwards;
+        }
+    }
+}
+
+.dialog-open-before {
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -318px;
+        margin-top: -120px;
+        width: 637px;
+        height: 240px;
+        background-image: url(../images/jishi_bg.png);
+        background-size: 637px;
+    }
+}
+
+.dialog-open {
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -321px;
+        margin-top: -260px;
+        width: 643px;
+        height: 518px;
+        background-image: url(../images/result_bg.png);
+        background-size: 693px;
+    }
+    .lotted-item {
+        position: absolute;
+        top: 262px;
+        width: 90px;
+        height: 154px;
+        overflow: hidden;
+        @for $i from 1 through 3 {
+            // .item-#{$i} { width: 2em * $i; }
+            &:nth-child(#{$i}) {
+                left: 206px * $i + 67px - 206px;
+            }
+        }
+        ul {
+            // width: 999px;
+        }
+        li {
+            // float:left;
+            width: 90px;
+            height: 154px;
+            font-size: 66px;
+            color: #5d2a29;
+            line-height: 154px;
+            text-align: center;
+        }
+    }
+}
+
+.dialog-award {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 750px;
+    background: rgba(0, 0, 0, .8);
+    z-index: 99;
+    &.active {
+        display: block;
+        .paper {
+            animation: openBox 0.6s ease forwards;
+            -webkit-animation: openBox 0.6s ease forwards;
+        }
+    }
+    .content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -253px;
+        margin-left: -287px;
+        width: 575px;
+        height: 506px;
+        background-image: url(../images/dialog_award.png);
+        background-size: 575px;
+    }
+    .paper {
+        position: relative;
+        width: 20px;
+        height: 197px;
+        margin: 150px auto 0;
+        background-image: url(../images/award_paper.png);
+        background-size: 587px;
+        background-position: top right;
+        overflow: hidden;
+        &:before {
+            content: '';
+            float: left;
+            display: block;
+            width: 10px;
+            height: 197px;
+            background-image: url(../images/award_paper.png);
+            background-size: 587px;
+            background-position: 0 0;
+        }
+        p {
+            -webkit-text-stroke: 5px #a12336;
+            font-size: 120px;
+            line-height: 180px;
+        }
+    }
+    p {
+        font-weight: bold;
+        text-shadow: 0 0 5px #7f1828;
+        text-align: center;
+        color: rgb(255, 252, 0);
+    }
+    .pape-desc {
+        position: absolute;
+        top: 105px;
+        left: 0;
+        width: 100%;
+        -webkit-text-stroke: 2px #a12336;
+        font-size: 60px;
+    }
+}
+
+.dialog-records {
+    .content {
+        position: absolute;
+        top: 15%;
+        bottom: 15%;
+        left: 50%;
+        margin-left: -318px;
+        width: 637px;
+        background-image: url(../images/dialog_default.png);
+        background-size: 637px;
+        background-position: center bottom;
+        &:before {
+            content: '';
+            display: block;
+            height: 35px;
+            background-image: url(../images/dialog_default.png);
+            background-size: 637px;
+            background-position: center top;
+        }
+        h3 {
+            font-size: 44px;
+            color: #c48f1e;
+            line-height: 44px;
+            text-align: center;
+            font-weight: normal;
+        }
+        .butn-close {
+            position: absolute;
+            top: 42px;
+            right: 42px;
+            width: 29px;
+            height: 29px;
+            background-image: url(../images/close.png);
+            background-size: 29px;
+        }
+        ul {
+            padding: 19px 12px 10px;
+            height: 80%;
+            overflow: auto;
+        }
+    }
+    li {
+        // @include clearfix();
+        @extend .clearfix;
+        &:nth-child(odd) {
+            background: #580d19;
+        }
+        &:nth-child(1) {
+            background: #410811;
+        }
+        span {
+            display: block;
+            width: 30px;
+            float: left;
+            min-height: 25px;
+            font-size: 28px;
+            color: rgb(151, 78, 89);
+            line-height: 2.25;
+            margin-right: 20px;
+            text-align: center;
+            &:nth-child(1) {
+                width: 145px;
+                text-align: center;
+                overflow: hidden;
+            }
+            &:nth-child(3) {
+                margin-right: 45px;
+            }
+            &:last-child() {
+                margin-right: 0;
+                float: right;
+                width: 60px; // padding-right: 10px;
+                // text-align: center;
+            }
+            @for $i from 2 through 9 {
+                @if $i>2 {
+                    &.active:before {
+                        content: '';
+                        display: block;
+                        margin: 5px auto;
+                        width: 16px;
+                        height: 16px;
+                        background-image: url(../images/active-2.png);
+                        background-size: 16px;
+                    }
+                } @else {
+                    &.active:before {
+                        content: '';
+                        position: relative;
+                        top:20px;
+                        display: block;
+                        margin: 0 auto;
+                        width: 16px;
+                        height: 16px;
+                        background-image: url(../images/active-1.png);
+                        background-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.text-rule{
+    border-top: 2px solid #410811;
+    margin-top: 12px;
+    padding: 30px 48px;
+    p{
+        color:#cd7254;
+        font-size: 28px;
+        line-height: 48px;
+    }
+}

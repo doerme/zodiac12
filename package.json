@@ -26,7 +26,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --inline",
-    "dev": "NODE_ENV=out webpack --watch",
+    "dev": "webpack --watch",
     "build": "NODE_ENV=out webpack -p",
     "startBefore": "ln -s /Users/linz/Documents/linz/lin_learn/node-module/node_modules ./node_modules",
     "task-build": "npm run build",
